@@ -10,7 +10,6 @@
         "precommit-hook": "^2.0.1"
     },
     "precommit": [
-        "test"
     ],
     "private": true,
     "scripts": {
