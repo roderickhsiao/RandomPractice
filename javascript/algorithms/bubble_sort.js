@@ -16,12 +16,12 @@ function _isValidArray(lists) {
 /**
  * Javascript implementaion of bubble sort
  * http://en.wikipedia.org/wiki/Bubble_sort
+ * Complexity: O(n^2)
  *
  * @method bubbleSort
  * @params {Array} lists target array to be sort
  * @return {Array} list sorted array
  */
-// [5, 1, 4, 2, 8]
 var bubbleSort = function bubbleSort(lists) {
     if (!_isValidArray(lists)) {
         debug('ERROR, INVALID ARRAY');
