@@ -27,15 +27,23 @@ var bubbleSort = function bubbleSort(lists) {
         debug('ERROR, INVALID ARRAY');
         return NULL;
     }
+    var surface = lists.length - 1;
 
-    for (var i = 0, j = lists.length; i < j; i++) {
-        for (var a = i; a > 0; a--) {
-            if (lists[a] < lists[a - 1]) {
+    for (var i = 0, j = lists.length; i < j - 1; i++) {
+        var newSurface = 0;
+        for (var a = 0; a < surface; a++) {
+            if (lists[a] > lists[a + 1]) {
                 // swap
                 var temp = lists[a];
-                lists[a] = lists[a - 1];
-                lists[a - 1] = temp;
+                lists[a] = lists[a + 1];
+                lists[a + 1] = temp;
+                newSurface = a;
             }
+        }
+        surface = newSurface;
+        if (!surface) {
+            // already complete sorting
+            return lists;
         }
     }
 
