@@ -9,7 +9,8 @@
         "mocha": "^2.0.0",
         "precommit-hook": "^2.0.1"
     },
-    "precommit": [
+    "pre-commit": [
+        "test"
     ],
     "private": true,
     "scripts": {
