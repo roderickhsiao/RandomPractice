@@ -48,13 +48,11 @@ var binarySearch = function binarySearch(target, element) {
         if (currentItem < element) {
             start = index + 1;
             debug('Shifting start index', start);
-        } else if (currentItem > element) {
+        } else {
+            // it can be currentItem > element, or any other case like
+            // different type comparison
             end = index - 1;
             debug('Shifting end index', end);
-        } else if (!validateType(currentItem, element)) {
-            // currentItem !== element, but
-            // currentItem == element (type doesn't match)
-            return -1;
         }
     }
 
