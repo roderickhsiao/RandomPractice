@@ -1,5 +1,4 @@
 /* global describe, beforeEach, it */
-/* jshint node:true */
 'use strict';
 
 var expect = require('chai').expect;
