@@ -15,6 +15,7 @@ var debug = require('debug')('BINARY SEARCH');
  */
 
 var binarySearch = function binarySearch(target, element) {
+    debug('Start Binary Search');
     if (!target ||
         !element ||
         target.constructor !== Array ||
@@ -28,14 +29,16 @@ var binarySearch = function binarySearch(target, element) {
         var index = Math.floor((start + end) / 2);
 
         if (target[index] === element) {
-            // match
+            debug('Found match');
             return index;
         }
 
         if (target[index] < element) {
             start = index + 1;
+            debug('Swifting end index', start);
         } else if (target[index] > element) {
-            start = end - 1;
+            end = end - 1;
+            debug('Swifting end index', end);
         }
     }
 
