@@ -35,9 +35,9 @@ var binarySearch = function binarySearch(target, element) {
 
         if (target[index] < element) {
             start = index + 1;
-            debug('Swifting end index', start);
+            debug('Swifting start index', start);
         } else if (target[index] > element) {
-            end = end - 1;
+            end = index - 1;
             debug('Swifting end index', end);
         }
     }
