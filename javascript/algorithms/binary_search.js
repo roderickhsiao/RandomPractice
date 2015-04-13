@@ -2,18 +2,6 @@
 
 var debug = require('debug')('BINARY SEARCH');
 
-
-/**
- * validateType - validate if type match
- *
- * @param  {Number|String} a input a
- * @param  {Number|String} b input b
- * @return {Boolean}
- */
-function validateType(a, b) {
-    return typeof a === typeof b;
-}
-
 /**
  * Javascript implementaion of binary search
  * http://en.wikipedia.org/wiki/Binary_search_algorithm
