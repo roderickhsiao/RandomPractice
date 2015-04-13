@@ -20,6 +20,7 @@ var binarySearch = function binarySearch(target, element) {
         !element ||
         target.constructor !== Array ||
         target.legnth < 0) {
+        debug('ERROR, INVALID INPUT');
         return -1;
     }
     var start = 0;
