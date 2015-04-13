@@ -19,7 +19,6 @@ describe('#Inheritance Class (ES6)', function() {
             expect(parent.name).to.equal('Animal');
             expect(parent.tails).to.equal(null);
             expect(parent.legs).to.equal(null);
-
         });
 
         it('dog should inherit from animal', function() {
