@@ -32,6 +32,10 @@ describe('#Binary Search', function() {
             var sortedArray = [0, 1, 2, 3, 4, 5];
             expect(binarySearch(sortedArray, 6)).to.deep.equal(-1);
         });
-    });
 
+        it('should not mach if type is not equal', function() {
+            var sortedArray = ['0', '1', '2', '3', '4', '5'];
+            expect(binarySearch(sortedArray, 4)).to.deep.equal(-1);
+        });
+    });
 });
