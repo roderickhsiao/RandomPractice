@@ -2,18 +2,6 @@
 
 var debug = require('debug')('BINARY SEARCH');
 
-
-/**
- * validateType - validate if type match
- *
- * @param  {Number|String} a input a
- * @param  {Number|String} b input b
- * @return {Boolean}
- */
-function validateType(a, b) {
-    return typeof a === typeof b;
-}
-
 /**
  * Javascript implementaion of binary search
  * http://en.wikipedia.org/wiki/Binary_search_algorithm
@@ -48,13 +36,11 @@ var binarySearch = function binarySearch(target, element) {
         if (currentItem < element) {
             start = index + 1;
             debug('Shifting start index', start);
-        } else if (currentItem > element) {
+        } else {
+            // it can be currentItem > element, or any other case like
+            // different type comparison
             end = index - 1;
             debug('Shifting end index', end);
-        } else if (!validateType(currentItem, element)) {
-            // currentItem !== element, but
-            // currentItem == element (type doesn't match)
-            return -1;
         }
     }
 
