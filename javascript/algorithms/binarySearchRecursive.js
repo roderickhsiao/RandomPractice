@@ -24,9 +24,9 @@ var binarySearch = function binarySearch(target, element, start, end) {
     var startIndex = start || 0;
     var endIndex = end || target.length - 1;
 
-    while (startIndex <= endIndex) {
+    if (startIndex <= endIndex) {
         var index = Math.floor((startIndex + endIndex) / 2);
-
+        
         var currentItem = target[index];
         if (currentItem === element) {
             debug('Found match');
