@@ -7,7 +7,7 @@ var bubbleSort;
 describe('#Bubble Sort', function() {
 
     beforeEach(function() {
-        bubbleSort = require('../../../javascript/algorithms/bubble_sort');
+        bubbleSort = require('../../../javascript/algorithms/bubbleSort');
     });
 
     describe('Positive test cases', function() {

@@ -7,7 +7,7 @@ var binarySearch;
 describe('#Binary Search', function() {
 
     beforeEach(function() {
-        binarySearch = require('../../../javascript/algorithms/binary_search');
+        binarySearch = require('../../../javascript/algorithms/binarySearch');
     });
 
     describe('Positive test cases', function() {
