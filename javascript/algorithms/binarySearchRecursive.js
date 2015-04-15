@@ -26,7 +26,7 @@ var binarySearch = function binarySearch(target, element, start, end) {
 
     if (startIndex <= endIndex) {
         var index = Math.floor((startIndex + endIndex) / 2);
-        
+
         var currentItem = target[index];
         if (currentItem === element) {
             debug('Found match');
@@ -35,13 +35,13 @@ var binarySearch = function binarySearch(target, element, start, end) {
 
         if (currentItem < element) {
             startIndex = index + 1;
-            return binarySearch(target, element, startIndex, endIndex);
         } else {
             // it can be currentItem > element, or any other case like
             // different type comparison
             endIndex = index - 1;
-            return binarySearch(target, element, startIndex, endIndex);
         }
+        return binarySearch(target, element, startIndex, endIndex);
+
     }
 
     return -1;
