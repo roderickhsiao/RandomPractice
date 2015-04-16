@@ -21,7 +21,7 @@ function Dog(name) {
 }
 
 Dog.prototype = Object.create(Animal.prototype);
-Dog.prototype.constractor = Animal;
+Dog.prototype.constructor = Animal;
 
 // Overwrite
 Dog.prototype.saySomething = function() {
