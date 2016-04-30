@@ -11,7 +11,7 @@ let debug = Debug('BINARY SEARCH');
  *
  * @return {Boolean}
  */
-var binarySearch = function binarySearch(target, element, start, end) {
+var binarySearch = (target, element, start, end) => {
     debug('Start Binary Search');
     if (!target || !target.length || !element) {
         return -1;
