@@ -26,11 +26,16 @@ var reverseWords = (message) => {
         return message;
     }
     var messageArray = message.split(' ');
-    var tempArray = [];
-    for (var i = messageArray.length -1; i >= 0; i--) {
-        tempArray.push(messageArray[i]);
+    var start = 0;
+    var end = messageArray.length - 1;
+    while (start < end) {
+        var temp = messageArray[start];
+        messageArray[start] = messageArray[end];
+        messageArray[end] = temp;
+        start++;
+        end--;
     }
-    return tempArray.join(' ');
+    return messageArray.join(' ');
 }
 
 export default reverseWords;
