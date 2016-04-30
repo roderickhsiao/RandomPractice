@@ -1,10 +1,9 @@
 'use strict';
 
-var debug = require('debug')('BINARY SEARCH');
+import Debug from 'debug';
+let debug = Debug('BINARY SEARCH');
 
 /**
- * Javascript implementaion of binary search
- * http://en.wikipedia.org/wiki/Binary_search_algorithm
  *
  * @method binarySearch
  * @params {Array} target array to be searched
@@ -14,37 +13,27 @@ var debug = require('debug')('BINARY SEARCH');
  */
 var binarySearch = function binarySearch(target, element) {
     debug('Start Binary Search');
-    if (!target ||
-        !element ||
-        target.constructor !== Array ||
-        target.legnth < 0) {
-        debug('ERROR, INVALID INPUT');
+    if (!target || !target.length || !element) {
         return -1;
     }
-    var start = 0;
-    var end = target.length - 1;
+    let start = 0;
+    let end = target.length - 1;
+    let mid = Math.floor((start + end) / 2);
 
-    while (start <= end) {
-        var index = Math.floor((start + end) / 2);
-
-        var currentItem = target[index];
-        if (currentItem === element) {
-            debug('Found match');
-            return index;
+    while (start < end) {
+        let value = target[mid];
+        if (value === element) {
+            return mid;
         }
-
-        if (currentItem < element) {
-            start = index + 1;
-            debug('Shifting start index', start);
+        if (value < element) {
+            start = mid + 1;
         } else {
-            // it can be currentItem > element, or any other case like
-            // different type comparison
-            end = index - 1;
-            debug('Shifting end index', end);
+            end = mid - 1;
         }
+        mid = Math.floor((start + end) / 2);
     }
 
-    return -1;
+    return target[mid] === element ? mid : -1;
 };
 
-module.exports = binarySearch;
+export default binarySearch;

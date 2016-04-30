@@ -5,7 +5,6 @@ var expect = require('chai').expect;
 var inheritance;
 
 describe('#Inheritance', function() {
-
     beforeEach(function() {
         inheritance = require('../../../javascript/basic/inheritance');
     });

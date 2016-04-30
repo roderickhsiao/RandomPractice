@@ -1,15 +1,9 @@
-/* global describe, beforeEach, it */
-'use strict';
+/* global describe, it */
 
-var expect = require('chai').expect;
-var binarySearch;
+import {expect} from 'chai';
+import binarySearch from '../../../javascript/algorithms/binarySearch';
 
 describe('#Binary Search', function() {
-
-    beforeEach(function() {
-        binarySearch = require('../../../javascript/algorithms/binarySearch');
-    });
-
     describe('Positive test cases', function() {
         it('should return index if element found (small) - number', function() {
             var sortedArray = [0, 1, 2, 3, 4, 5];
