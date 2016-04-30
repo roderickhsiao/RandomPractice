@@ -1,5 +1,3 @@
-'use strict';
-
 import Debug from 'debug';
 let debug = Debug('BINARY SEARCH');
 

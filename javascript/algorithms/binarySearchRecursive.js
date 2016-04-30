@@ -1,6 +1,5 @@
-'use strict';
-
-var debug = require('debug')('BINARY SEARCH');
+import Debug from 'debug';
+let debug = Debug('BINARY SEARCH');
 
 /**
  * Javascript implementaion of binary search
@@ -14,11 +13,7 @@ var debug = require('debug')('BINARY SEARCH');
  */
 var binarySearch = function binarySearch(target, element, start, end) {
     debug('Start Binary Search');
-    if (!target ||
-        !element ||
-        target.constructor !== Array ||
-        target.legnth < 0) {
-        debug('ERROR, INVALID INPUT');
+    if (!target || !target.length || !element) {
         return -1;
     }
     var startIndex = start || 0;
@@ -47,4 +42,4 @@ var binarySearch = function binarySearch(target, element, start, end) {
     return -1;
 };
 
-module.exports = binarySearch;
+export default binarySearch;
