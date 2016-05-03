@@ -22,16 +22,16 @@ var deleteDuplicates = (head) => {
     if (!head || !head.next) {
         return head;
     }
-    var headNode = head;
-    while (head && head.next) {
-        var nextNode = head.next;
-        if (head.val === nextNode.val) {
-            head.next = nextNode.next;
+    var node = head;
+    while (node && node.next) {
+        var nextNode = node.next;
+        if (node.val === nextNode.val) {
+            node.next = nextNode.next;
         } else {
-            head = nextNode;
+            node = nextNode;
         }
     }
-    return headNode;
+    return head;
 };
 
 export default deleteDuplicates;
