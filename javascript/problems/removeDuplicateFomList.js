@@ -20,17 +20,18 @@
  */
 var deleteDuplicates = (head) => {
     if (!head || !head.next) {
-           return head;
-   }
-   var headNode = head;
-   while (head && head.next) {
-       if (head.val === head.next.val) {
-           head.next = head.next.next;
-       } else {
-           head = head.next;
-       }
-   }
-   return headNode;
+        return head;
+    }
+    var headNode = head;
+    while (head && head.next) {
+        var nextNode = head.next;
+        if (head.val === nextNode.val) {
+            head.next = nextNode.next;
+        } else {
+            head = nextNode;
+        }
+    }
+    return headNode;
 };
 
 export default deleteDuplicates;
