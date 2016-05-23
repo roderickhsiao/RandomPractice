@@ -4,14 +4,14 @@
 var expect = require('chai').expect;
 var inheritance;
 
-describe('#Inheritance Class (ES6)', function() {
+describe('#Inheritance Class (ES6)', () => {
 
-    beforeEach(function() {
+    beforeEach(() => {
         inheritance = require('../../../javascript/basic/inheritanceClass');
     });
 
-    describe('Basic object check', function() {
-        it('should have basic object setup (parent)', function() {
+    describe('Basic object check', () => {
+        it('should have basic object setup (parent)', () => {
             var parent = new inheritance.Animal('Animal');
             expect(parent.saySomething()).to.equal('Say something');
             expect(parent.eatSomething()).to.equal('I am eating');
@@ -20,7 +20,7 @@ describe('#Inheritance Class (ES6)', function() {
             expect(parent.legs).to.equal(null);
         });
 
-        it('dog should inherit from animal', function() {
+        it('dog should inherit from animal', () => {
             var dog = new inheritance.Dog('Dog');
             expect(dog.saySomething()).to.equal('Bark');
             expect(dog.eatSomething()).to.equal('I am eating');

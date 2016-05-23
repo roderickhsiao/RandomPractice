@@ -22,7 +22,7 @@ describe('#Binary Search Recursive', () => {
     });
 
     describe('Negative test cases', () => {
-        it('should return -1 if element not found', function() {
+        it('should return -1 if element not found', () => {
             var sortedArray = [0, 1, 2, 3, 4, 5];
             expect(binarySearch(sortedArray, 6)).to.deep.equal(-1);
         });
