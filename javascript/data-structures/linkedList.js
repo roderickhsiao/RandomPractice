@@ -60,6 +60,8 @@ class LinkedList {
         }
     }
 
+    // TODO, we can probably store a private variable for length
+    // operate when add/remove, and access via size() public method
     size () {
         var count = 0;
         var current = this.head;
